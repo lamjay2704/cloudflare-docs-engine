@@ -45,7 +45,8 @@
     "react-transition-group": "4.4.1",
     "remark-slug": "6.0.0",
     "saber-plugin-git-modification-time": "0.1.3",
-    "set-interval-visible": "2.0.0"
+    "set-interval-visible": "2.0.0",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -65,6 +66,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "publish": "npm run build && wrangler publish",
     "serve": "gatsby serve",
-    "start": "npm run develop"
-  }
+    "start": "npm run develop",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
